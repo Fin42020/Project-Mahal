@@ -2,5 +2,11 @@ using UnityEngine;
 
 public abstract class Actor : MonoBehaviour
 {
-    protected float TotalHP = 100f;
+    [SerializeField] protected int TotalHP;
+    [SerializeField] protected int CurrentHP;
+    [SerializeField] protected int MoveValue;
+    public virtual void TakeDamage()
+    {
+        Debug.Log("Ouchy");
+    }
 }
